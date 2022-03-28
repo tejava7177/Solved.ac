@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+//시험 점수 변환 함수
 double change(double max, double score){
     return score / max * 100;
 }
