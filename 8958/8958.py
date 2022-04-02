@@ -4,6 +4,7 @@ for i in range(user):
     point  = 0
     total = 0
     score = input()
+    
     b = list(score)
 
     for i in score:
