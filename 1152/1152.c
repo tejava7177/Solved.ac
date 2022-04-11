@@ -11,7 +11,7 @@
 
 int main() {
     char input[1000001];
-    scanf("%[^\n]", input);
+    scanf("%[^\n]", input);             //\n이 나올 때깢 입력 받는다.
     int len = strlen(input), count=0;
     if(len == 1 && input[0] == ' '){
         printf("0");
