@@ -2,28 +2,41 @@
 //  main.c
 //  3052
 //
-//  Created by 심주흔 on 2022/04/04.
+//  Created by 심주흔 on 2022/04/13.
 //
 
 #include <stdio.h>
 
-int main(void) {
+//삽입 정렬 알고리즘
+void insertion(int list[], int n){
+    int i, j, key;
+    for(i = 1; i<n; i++){
+        key = list[i];
+        for(j = i - 1; j>= 0 && list[j]>key; j--)
+            list[j + 1] = list[j];
+        list[j + 1] = key;
+    }
+}
+
+int main(int argc, const char * argv[]) {
     
-    int input, result=0;
-    int remain[10];
+    int num;
+    int rest[10];
+    int count = 1;
     
-    for(int i=0; i<10; i++) {
-        scanf("%d", &input);
-        remain[i] = (input % 42);
+    for(int i = 0; i<10; i++){
+        scanf("%d" , &num);
+        rest[i] = num % 42;
     }
     
-    for(int i=0; i<10; i++) {
-        int count=0; // 초기화
-        for(int j=i+1; j<10; j++) { // 서로 같은 수일 경우
-            if(remain[i] == remain[j]) count++;
-        }
-        if (count == 0) result++; // 같은 수가 없을 경우 개수를 세준다
+    insertion(rest, 10);
+    
+    for(int i = 0; i<9; i++){
+        if(rest[i] != rest[i+1])
+            count++;
     }
     
-   printf("%d\n", result);
+    printf("%d\n" , count);
+    
+    return 0;
 }
