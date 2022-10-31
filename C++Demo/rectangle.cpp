@@ -6,7 +6,7 @@
 //
 
 
-/*
+
 #include <iostream>
 using namespace std;
 
@@ -57,4 +57,4 @@ int main(){
     if(rect3.isSquare())
         cout << "rect3은 정사각형이다." << endl;
 }
-*/
+
