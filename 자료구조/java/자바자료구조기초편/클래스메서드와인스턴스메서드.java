@@ -1,6 +1,6 @@
 package 자바자료구조기초편;
 
-import static sun.security.pkcs11.wrapper.Functions.getId;
+
 
 //아이디를 부여하는 클래스
 class Id{
